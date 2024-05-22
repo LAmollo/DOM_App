@@ -33,5 +33,10 @@ function fetchWeather(city) {
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
+            displayError('City not found. Please enter a valid city name.');
+        });
+}
+
+
 
   
