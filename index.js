@@ -18,3 +18,11 @@ weatherForm.addEventListener('submit', function(event) {
 function fetchWeather(city) {
     const apiKey = 'API KEY';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('City not found');
+            }
+            return response.json();
+        })
