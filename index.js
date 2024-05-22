@@ -1,13 +1,7 @@
-/**
-* @jest-environment jsdom
-*/
-
 const cityInput = document.getElementById('cityInput');
 const submitBtn = document.getElementById('submitBtn');
 const weatherForm = document.getElementById('weatherForm');
 const errorDiv = document.getElementById('errorDiv');
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
 
 weatherForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -22,7 +16,7 @@ weatherForm.addEventListener('submit', function(event) {
 });
 
 function fetchWeather(city) {
-    const apiKey = '0ce3ad64e1e026ca8eae0a7e795ae30e'
+    const apiKey = '0ce3ad64e1e026ca8eae0a7e795ae30e';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -32,7 +26,6 @@ function fetchWeather(city) {
             }
             return response.json();
         })
-
         .then(data => {
             displayWeather(data);
             setWeatherBackground(data.weather[0].main);
