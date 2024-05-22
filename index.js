@@ -16,5 +16,5 @@ weatherForm.addEventListener('submit', function(event) {
 });
 
 function fetchWeather(city) {
-    const apiKey = '0ce3ad64e1e026ca8eae0a7e795ae30e';
+    const apiKey = 'API KEY';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
