@@ -1,7 +1,13 @@
+/**
+* @jest-environment jsdom
+*/
+
 const cityInput = document.getElementById('cityInput');
 const submitBtn = document.getElementById('submitBtn');
 const weatherForm = document.getElementById('weatherForm');
 const errorDiv = document.getElementById('errorDiv');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
 weatherForm.addEventListener('submit', function(event) {
     event.preventDefault();
