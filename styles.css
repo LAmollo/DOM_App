@@ -13,4 +13,37 @@ body {
     justify-content: center;
   }
   
+  .container {
+    text-align: center;
+    margin-top: 50px;
+    max-width: 600px; 
+    width: 90%; 
+  }
+  
+  /* Weather info styles */
+#weatherInfo {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1em; 
+  }
+
+  #temperature,
+#weather,
+#humidity,
+#wind-speed {
+  color: #333; 
+}
+
+/* Input and button styles */
+#cityInput {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 60%; 
+}
+
   
