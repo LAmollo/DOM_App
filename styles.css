@@ -5,7 +5,7 @@ body {
     font-size: 1.3em;
     color: #0b4141;
     text-shadow: .1em .1em 0 rgba(76, 65, 65, 0.352);
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #f0f0f0; 
     background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
     height: 100vh;
     display: flex;
@@ -49,16 +49,36 @@ body {
 #submitBtn {
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #007bff; /* Blue button color */
+    background-color: #007bff; 
     color: #fff;
     border: none;
     cursor: pointer;
-    width: 30%; /* Adjust button width for smaller screens */
+    width: 30%; 
 }
   
-  #submitBtn:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
+#submitBtn:hover {
+    background-color: #0056b3; 
 }
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    #cityInput {
+        width: 70%; 
+    }
+  
+}
+
+#submitBtn {
+    width: 25%; /* Adjust button width for smaller screens */
+}
+
+#weatherInfo {
+    padding: 10px;
+    font-size: 0.9em; /* Further reduce font size for smaller screens */
+}
+
+
+
   
   
 

@@ -54,3 +54,22 @@ function displayError(message) {
         errorDiv.textContent = '';
     }, 3000);
 }
+
+function setWeatherBackground(weather) {
+    const body = document.body;
+    body.classList.remove('sunny', 'cloudy', 'rainy');
+    switch (weather) {
+        case 'Clear':
+            body.classList.add('sunny');
+            break;
+        case 'Clouds':
+            body.classList.add('cloudy');
+            break;
+        case 'Rain':
+            body.classList.add('rainy');
+            break;
+        default:
+            // Do nothing for other weather conditions
+            break;
+    }
+}
