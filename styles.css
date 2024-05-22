@@ -11,16 +11,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .container {
+.container {
     text-align: center;
     margin-top: 50px;
     max-width: 600px; 
     width: 90%; 
-  }
+}
   
-  /* Weather info styles */
+/* Weather info styles */
 #weatherInfo {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -28,9 +28,9 @@ body {
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 1em; 
-  }
+}
 
-  #temperature,
+#temperature,
 #weather,
 #humidity,
 #wind-speed {
@@ -46,4 +46,19 @@ body {
   width: 60%; 
 }
 
+#submitBtn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 30%; /* Adjust button width for smaller screens */
+}
   
+  #submitBtn:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+  
+  
+
