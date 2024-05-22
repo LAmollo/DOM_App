@@ -26,3 +26,12 @@ function fetchWeather(city) {
             }
             return response.json();
         })
+
+        .then(data => {
+            displayWeather(data);
+            setWeatherBackground(data.weather[0].main);
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+
+  
