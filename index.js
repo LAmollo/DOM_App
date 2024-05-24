@@ -1,21 +1,22 @@
-const cityInput = document.getElementById('cityInput');
+const cityInput = document.getElementById('cityInput');  // Get references to HTML elements
 const submitBtn = document.getElementById('submitBtn');
 const weatherForm = document.getElementById('weatherForm');
 const errorDiv = document.getElementById('errorDiv');
 
-weatherForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+weatherForm.addEventListener('submit', function(event) { // Add event listener to the form for submitting city weathe
+    event.preventDefault();  // Prevent form submission from refreshing the page
 
-    const city = cityInput.value.trim();
 
-    if (city !== '') {
-        fetchWeather(city);
+    const city = cityInput.value.trim(); // Get the value of the city input field and trim any trailing whitespaces
+
+    if (city !== '') {    // Check if the city input is not empty
+        fetchWeather(city);  // If city is provided, fetch weather data for that city
     } else {
-        displayError('Please enter a city name.');
+        displayError('Please enter a city name.'); // If city input is empty, display an error message
     }
 });
 
-function fetchWeather(city) {
+function fetchWeather(city) {  // Function to fetch weather data from OpenWeatherMap API
     const apiKey = '0ce3ad64e1e026ca8eae0a7e795ae30e';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
