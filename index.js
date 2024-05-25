@@ -29,15 +29,16 @@ function fetchWeather(city) {  // Function to fetch weather data from OpenWeathe
         })
         .then(data => {
             displayWeather(data);
-            setWeatherBackground(data.weather[0].main);
+            setWeatherBackground(data.weather[0].main);  // Set background based on weather condition
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);
-            displayError('City not found. Please enter a valid city name.');
+            displayError('City not found. Please enter a valid city name.'); // Display error message for invalid city
         });
 }
 
-function displayWeather(data) {
+function displayWeather(data) {  // Function to display weather data on the page
+    const body = document.body;
     const weatherInfoContainer = document.getElementById('weatherInfo');
     weatherInfoContainer.innerHTML = `
         <h2>${data.name}, ${data.sys.country}</h2>
@@ -48,16 +49,16 @@ function displayWeather(data) {
     `;
 }
 
-function displayError(message) {
+function displayError(message) { // Function to display error message
     errorDiv.textContent = message;
     setTimeout(() => {
         errorDiv.textContent = '';
     }, 3000);
 
-    
+
 }
 
-function setWeatherBackground(weather) {
+function setWeatherBackground(weather) { //Function to set background based on weather condition
     const body = document.body;
     body.classList.remove('sunny', 'cloudy', 'rainy');
     switch (weather) {
