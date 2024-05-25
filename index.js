@@ -53,6 +53,8 @@ function displayError(message) {
     setTimeout(() => {
         errorDiv.textContent = '';
     }, 3000);
+
+    
 }
 
 function setWeatherBackground(weather) {
